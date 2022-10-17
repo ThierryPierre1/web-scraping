@@ -9,7 +9,11 @@ print(soup.prettify())
 
 table = soup.find('tbody', class_='tableBodyContainer isPL')
 print(table)
+
 output_titles = []
+for i in table:
+    print(i.text)
+    output_titles.append(i.text)
 
 for teams in table:
     print(teams.text)
